@@ -1,0 +1,6 @@
+@import "./variables.scss";
+
+
+@function vw($width) {
+  @return $width / $design-width * 100vw;
+}
