@@ -1,0 +1,77 @@
+.color-popover-selector {
+  .color-default {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    margin-bottom: 8px;
+    &:hover {
+      background-color: #f2f2f2;
+    }
+    .color-default-block {
+      width: 28px;
+      height: 28px;
+      text-align: center;
+      line-height: 28px;
+      font-size: 16px;
+      border-radius: 2px;
+      font-weight: 500;
+      box-sizing: border-box;
+    }
+    .color-default-text {
+      margin-left: 4px;
+    }
+  }
+  .color-list {
+    display: flex;
+    align-items: center;
+    .color-item {
+      width: 28px;
+      height: 28px;
+      margin-right: 8px;
+      text-align: center;
+      line-height: 28px;
+      font-size: 16px;
+      border-radius: 2px;
+      font-weight: 500;
+      box-sizing: border-box;
+      cursor: pointer;
+    }
+
+    .color-item-selected {
+      border: 1px solid #2a6cff;
+    }
+  }
+
+  .custom-color {
+    .custom-color-title {
+      margin-top: 12px;
+      margin-bottom: 8px;
+      font-size: 12px;
+    }
+    .color-list {
+      .add-color-btn {
+        position: relative;
+        .add-color-btn-label {
+          position: relative;
+          display: flex;
+          cursor: pointer;
+          background-color: white;
+          z-index: 1;
+        }
+
+        .add-color-btn-input-wrapper {
+          position: absolute;
+          left: 18px;
+          top: 18px;
+          width: 0;
+          height: 0;
+          overflow: hidden;
+        }
+        .add-color-btn-input {
+          width: 0;
+          height: 0;
+        }
+      }
+    }
+  }
+}

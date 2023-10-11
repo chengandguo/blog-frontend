@@ -1,0 +1,33 @@
+.i-input {
+  display: flex;
+  flex-direction: column;
+  .i-input-label {
+    font-size: 14px;
+    margin-bottom: 12px;
+  }
+  .i-input-text {
+    border: 1px solid $main-color;
+    width: 340px;
+    height: 44px;
+    padding: 0 12px;
+
+    &-error {
+      border: 1px solid #e61414;
+    }
+
+    &::placeholder {
+      color: $vice-color;
+    }
+
+    &:focus {
+      border: 1px solid #1e71ff;
+      outline: none;
+    }
+  }
+}
+
+.i-input-error {
+  margin-top: 4px;
+  color: #e6532e;
+  font-size: 12px;
+}

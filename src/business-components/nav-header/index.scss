@@ -1,0 +1,33 @@
+.i-nav {
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 56px;
+  padding: 0 24px;
+  border-bottom: 1px solid #f2f2f2;
+  box-sizing: border-box;
+  background-color: white;
+  .i-nav-logo {
+  }
+  .i-nav-right {
+    display: flex;
+    align-items: center;
+    .i-nav-writing {
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      .i-nav-writing-text {
+        margin-left: 8px;
+        font-size: 14px;
+      }
+    }
+    .i-nav-writing-avatar {
+      margin-left: 24px;
+      width: 32px;
+      height: 32px;
+      border-radius: 16px;
+    }
+  }
+}

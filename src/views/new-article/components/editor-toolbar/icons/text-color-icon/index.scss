@@ -1,0 +1,11 @@
+.text-color-icon {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  .text-color-icon-tag {
+    width: 16px;
+    height: 3px;
+    background-color: $main-color;
+  }
+}

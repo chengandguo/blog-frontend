@@ -1,0 +1,30 @@
+.new-article {
+  .article-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 65px;
+    .article-title {
+      width: 700px;
+      padding-left: 0px;
+      padding-top: 16px;
+      padding-bottom: 16px;
+      font-size: 32px;
+      font-weight: bold;
+      border-bottom: 1px solid $line-color;
+      &::placeholder {
+        font-size: 32px;
+        color: #b3b3b1;
+        font-weight: 400;
+      }
+    }
+
+    .article-editor {
+      width: 700px;
+      padding: 24px 16px;
+      &:focus {
+        outline: 0;
+      }
+    }
+  }
+}

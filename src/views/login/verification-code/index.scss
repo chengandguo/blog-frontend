@@ -1,0 +1,55 @@
+.code {
+  box-sizing: border-box;
+  .code-notice {
+    margin-top: 12px;
+    font-size: 16px;
+  }
+  .code-receiver {
+    font-size: 16px;
+  }
+
+  .code-list {
+    margin-top: 12px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    .code-item {
+      margin-right: 12px;
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+    .code-item-input-text {
+      width: 50px;
+      height: 50px;
+      box-sizing: border-box;
+      text-align: center;
+      font-size: 18px;
+    }
+  }
+
+  .code-list-error {
+    margin-top: 4px;
+    font-size: 12px;
+    line-height: 30px;
+    color: #fe4960;
+  }
+
+  .code-count-down {
+    margin-top: 12px;
+    color: #595f6d;
+    span {
+      color: #fe4960;
+    }
+  }
+
+  .code-count-down-resend {
+    margin-top: 12px;
+    padding: 12px 0;
+    font-size: 30px;
+    color: #1e71ff;
+  }
+
+  .code-btn-verify {
+  }
+}

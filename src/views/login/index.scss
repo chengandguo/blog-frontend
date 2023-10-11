@@ -1,0 +1,26 @@
+.login {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+
+  .login-title {
+    font-size: 28px;
+    font-weight: bold;
+  }
+
+  .login-switch-list {
+    margin-top: 16px;
+    .login-switch-item {
+      padding: 0 12px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+  }
+  .send-code-btn {
+    margin-top: 24px;
+    width: 100px;
+  }
+}

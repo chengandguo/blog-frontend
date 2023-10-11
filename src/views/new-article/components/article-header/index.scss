@@ -1,0 +1,38 @@
+.article-header {
+  position: fixed;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  .article-header-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 1032px;
+    height: 65px;
+    .article-header-left {
+      display: flex;
+      align-items: center;
+      .article-logo {
+      }
+      .article-status {
+        margin-left: 16px;
+        font-size: 14px;
+        color: rgba(0, 0, 0, 0.54);
+      }
+    }
+    .article-header-right {
+      display: flex;
+      align-items: center;
+      .article-more-operation {
+        margin-left: 16px;
+        display: flex;
+        cursor: pointer;
+      }
+      .article-avatar {
+        margin-left: 16px;
+      }
+    }
+  }
+}

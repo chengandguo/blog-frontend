@@ -1,0 +1,13 @@
+.i-switch-container {
+  overflow-x: hidden;
+  width: 420px;
+  .i-switch-list {
+    display: flex;
+    align-items: center;
+    transition: 250ms ease-out;
+    .i-switch-item {
+      width: 100%;
+      flex-shrink: 0;
+    }
+  }
+}

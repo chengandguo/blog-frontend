@@ -1,0 +1,69 @@
+.i-button {
+  color: $main-color;
+  cursor: pointer;
+}
+
+// button type
+.button-type-default {
+  border: 1px solid $main-color;
+  &[disabled] {
+    cursor: not-allowed;
+    border-color: #d9d9d9;
+    color: rgba(0, 0, 0, 0.25);
+    background-color: rgba(0, 0, 0, 0.04);
+  }
+  &:hover {
+    opacity: 0.9;
+  }
+}
+
+.button-type-primary {
+  background-color: $main-color;
+  color: white;
+  &[disabled] {
+    cursor: not-allowed;
+    border-color: #d9d9d9;
+    color: rgba(0, 0, 0, 0.25);
+    background-color: rgba(0, 0, 0, 0.04);
+  }
+  &:hover {
+    opacity: 0.9;
+  }
+}
+
+.button-type-link {
+  color: #06c;
+  &[disabled] {
+    cursor: not-allowed;
+    color: rgba(0, 0, 0, 0.25);
+  }
+}
+
+.button-type-text {
+  color: $main-color;
+  &[disabled] {
+    cursor: not-allowed;
+    color: rgba(0, 0, 0, 0.25);
+  }
+}
+
+// button shape
+.button-shape-round {
+  border-radius: 100px;
+}
+
+.button-shape-square {
+}
+
+// button-size
+.button-size-small {
+  padding: 2px 7px;
+}
+
+.button-size-middle {
+  padding: 4px 15px;
+}
+
+.button-size-large {
+  padding: 6px 15px;
+}
