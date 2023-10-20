@@ -44,7 +44,7 @@ const BackgroundColorMarkItem: React.FC<IProps> = (props) => {
   };
 
   return (
-    <li className={cx("editor-toolbar-item1")} data-format={format}>
+    <li className={cx("editor-toolbar-item-background")} data-format={format}>
       <Tooltip title={tooltipTitle} mouseEnterDelay={0.2}>
         <span
           className="editor-toolbar-item-icon"
@@ -66,7 +66,7 @@ const BackgroundColorMarkItem: React.FC<IProps> = (props) => {
           />
         }
       >
-        <div onMouseDown={handleOpen}>
+        <div className="editor-toolbar-item-more" onMouseDown={handleOpen}>
           <DownArrowIcon />
         </div>
       </Popover>

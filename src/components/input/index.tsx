@@ -5,12 +5,13 @@ import "./index.scss";
 interface IProps {
   label: string;
   value: string;
-  placeholder: string;
-  disabled: string;
-  error: React.ReactNode;
+  placeholder?: string;
+  disabled?: string;
+  error?: React.ReactNode;
   inputClassName?: string;
   inputTextClassName?: string;
-  onFocus: (e: React.MouseEvent) => void;
+  onFocus?: (e: React.MouseEvent) => void;
+  onChange?: (value: string) => void;
 }
 
 const Input: React.FC<IProps> = (props, ref) => {
@@ -41,7 +42,7 @@ const Input: React.FC<IProps> = (props, ref) => {
 
   const handleChange = (event) => {
     const value = event.target.value;
-    typeof onChange === "function" && onChange(value);
+    typeof onChange === "function" && onChange(value, event);
   };
 
   const handleFocus = () => {};

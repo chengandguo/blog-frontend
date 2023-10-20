@@ -1,0 +1,40 @@
+.editor-toolbar-link {
+  margin-right: 4px;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  border-radius: 2px;
+  &:hover {
+    background-color: #edf2fa;
+  }
+
+  .editor-toolbar-item-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+// link-popover style
+.link-popover {
+  padding: 16px;
+  .link-input {
+    margin-top: 16px;
+  }
+  .link-input-text {
+    width: 280px;
+    height: 34px;
+  }
+
+  .link-action {
+    margin-top: 16px;
+    display: flex;
+    justify-content: flex-end;
+    .link-confirm {
+      margin-left: 16px;
+    }
+  }
+}

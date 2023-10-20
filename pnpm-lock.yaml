@@ -9,6 +9,7 @@ specifiers:
   '@vitejs/plugin-react': ^4.0.3
   antd: ^5.9.2
   axios: ^1.4.0
+  copy-to-clipboard: ^3.3.3
   eslint: ^8.45.0
   eslint-plugin-react-hooks: ^4.6.0
   eslint-plugin-react-refresh: ^0.4.3
@@ -25,6 +26,7 @@ specifiers:
 dependencies:
   antd: registry.npmmirror.com/antd/5.9.2_react-dom@18.2.0+react@18.2.0
   axios: registry.npmmirror.com/axios/1.4.0
+  copy-to-clipboard: registry.npmmirror.com/copy-to-clipboard/3.3.3
   highlight.js: registry.npmmirror.com/highlight.js/11.8.0
   react: registry.npmmirror.com/react/18.2.0
   react-dom: registry.npmmirror.com/react-dom/18.2.0_react@18.2.0

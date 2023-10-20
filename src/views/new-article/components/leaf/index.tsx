@@ -1,4 +1,3 @@
-import { LayoutContext } from "antd/es/layout/layout";
 import React from "react";
 import "./index.scss";
 
@@ -9,6 +8,7 @@ interface IProps {
 const Leaf: React.FC<IProps> = (props) => {
   const { attributes, leaf } = props;
   let { children } = props;
+  console.log("leaf props: ", props);
   if (leaf.bold) {
     children = <strong className="slate-leaf-bold">{children}</strong>;
   }

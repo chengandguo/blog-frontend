@@ -3,8 +3,8 @@ import "./index.scss";
 
 interface IProps {}
 
-const Dropdown: React.FC<IProps> = (props) => {
+const ArticleOutline: React.FC<IProps> = (props) => {
   return <div></div>;
 };
 
-export default Dropdown;
+export default ArticleOutline;

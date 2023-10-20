@@ -1,9 +1,11 @@
 import React, { Ref } from "react";
 import cx from "@/utils/classnames";
 
+import ToolbarHeaderItem from "./toolbar-header-item";
 import ToolbarMarkItem from "./toolbar-mark-item";
 import ColorMarkItem from "./color-mark-item";
 import BackgroundColorMarkItem from "./background-color-mark-item";
+import ToolbarLinkItem from "./toolbar-link-item";
 // icons
 import BoldIcon from "./icons/bold-icon";
 import ItalicIcon from "./icons/italic-icon";
@@ -22,6 +24,7 @@ const EditorToolbar: React.FC<IProps> = (props) => {
   return (
     <div className="editor-toolbar">
       <ul className="editor-toolbar-list">
+        <ToolbarHeaderItem />
         <ToolbarMarkItem
           markContent={<BoldIcon />}
           format="bold"
@@ -43,11 +46,11 @@ const EditorToolbar: React.FC<IProps> = (props) => {
           tooltipTitle="删除线"
         />
         <ColorMarkItem format="color" tooltipTitle="文字颜色" />
-
         <BackgroundColorMarkItem
           format="backgroundColor"
           tooltipTitle="文字背景颜色"
         />
+        <ToolbarLinkItem />
       </ul>
     </div>
   );

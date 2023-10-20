@@ -1,8 +1,9 @@
 import React, { useState, useCallback, useMemo } from "react";
-import { createEditor } from "slate";
+import { createEditor, Editor, Transforms } from "slate";
 import { Slate, Editable, withReact } from "slate-react";
 import ArticleHeader from "./components/article-header";
 import EditorToolbar from "./components/editor-toolbar";
+import Element from "./components/element";
 import Leaf from "./components/leaf";
 import "./index.scss";
 
@@ -19,9 +20,32 @@ const NewArticle: React.FC = () => {
     []
   );
 
-  const renderLeaf = useCallback((props) => {
-    return <Leaf {...props} />;
-  }, []);
+  const renderLeaf = useCallback((props) => <Leaf {...props} />, []);
+
+  const renderElement = useCallback((props) => <Element {...props} />, []);
+
+  const handleKeydown = (event) => {
+    if (event.key === "Enter") {
+      const [match] = Editor.nodes(editor, {
+        match: (element) => element.type === "h1",
+      });
+      if (match) {
+        event.preventDefault();
+        const [titleElement, titlePath] = match;
+        const newParagraph = {
+          type: "paragraph",
+          children: [{ text: "" }],
+        };
+        Transforms.insertNodes(editor, newParagraph, {
+          at: Editor.after(editor, titlePath),
+          select: true,
+        });
+      } else {
+        event.preventDefault();
+        editor.insertBreak();
+      }
+    }
+  };
 
   return (
     <div className="new-article">
@@ -48,7 +72,8 @@ const NewArticle: React.FC = () => {
             placeholder="正文..."
             className="article-editor"
             renderLeaf={renderLeaf}
-            // onKeyDown={handleKeydown}
+            renderElement={renderElement}
+            onKeyDown={handleKeydown}
           />
         </Slate>
       </main>

@@ -1,0 +1,27 @@
+.editor-toolbar-header {
+  margin-right: 4px;
+  cursor: pointer;
+  border-radius: 2px;
+  .editor-toolbar-header-wrapper {
+    display: flex;
+    align-items: center;
+    .editor-toolbar-item-header-title {
+      margin-right: 4px;
+      font-size: 14px;
+      line-height: 24px;
+      width: 36px;
+    }
+    &:hover {
+      background-color: #edf2fa;
+    }
+  }
+
+  .color-popover-selector-mask {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 100;
+  }
+}
