@@ -1,4 +1,4 @@
-import React, { Ref } from "react";
+import React from "react";
 import cx from "@/utils/classnames";
 
 import ToolbarHeaderItem from "./toolbar-header-item";
@@ -6,6 +6,7 @@ import ToolbarMarkItem from "./toolbar-mark-item";
 import ColorMarkItem from "./color-mark-item";
 import BackgroundColorMarkItem from "./background-color-mark-item";
 import ToolbarLinkItem from "./toolbar-link-item";
+import ToolbarQuoteItem from "./toolbar-quote-item";
 // icons
 import BoldIcon from "./icons/bold-icon";
 import ItalicIcon from "./icons/italic-icon";
@@ -51,6 +52,7 @@ const EditorToolbar: React.FC<IProps> = (props) => {
           tooltipTitle="文字背景颜色"
         />
         <ToolbarLinkItem />
+        <ToolbarQuoteItem />
       </ul>
     </div>
   );

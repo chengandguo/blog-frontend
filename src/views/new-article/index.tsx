@@ -1,5 +1,10 @@
 import React, { useState, useCallback, useMemo } from "react";
-import { createEditor, Editor, Transforms } from "slate";
+import {
+  createEditor,
+  Editor,
+  Transforms,
+  Element as SlateElement,
+} from "slate";
 import { Slate, Editable, withReact } from "slate-react";
 import ArticleHeader from "./components/article-header";
 import EditorToolbar from "./components/editor-toolbar";
@@ -25,24 +30,48 @@ const NewArticle: React.FC = () => {
   const renderElement = useCallback((props) => <Element {...props} />, []);
 
   const handleKeydown = (event) => {
-    if (event.key === "Enter") {
-      const [match] = Editor.nodes(editor, {
-        match: (element) => element.type === "h1",
-      });
-      if (match) {
-        event.preventDefault();
-        const [titleElement, titlePath] = match;
-        const newParagraph = {
-          type: "paragraph",
-          children: [{ text: "" }],
-        };
-        Transforms.insertNodes(editor, newParagraph, {
-          at: Editor.after(editor, titlePath),
-          select: true,
+    const { key } = event;
+    switch (key) {
+      case "Enter": {
+        const [match] = Editor.nodes(editor, {
+          match: (element) => element.type === "h1",
         });
-      } else {
-        event.preventDefault();
-        editor.insertBreak();
+        if (match) {
+          event.preventDefault();
+          const [titleElement, titlePath] = match;
+          const newParagraph = {
+            type: "paragraph",
+            children: [{ text: "" }],
+          };
+          Transforms.insertNodes(editor, newParagraph, {
+            at: Editor.after(editor, titlePath),
+            select: true,
+          });
+        }
+        break;
+      }
+
+      case "Backspace": {
+        const [match] = Editor.nodes(editor, {
+          match: (n) => n.type === "block-quote",
+        });
+        const [blockQuoteElement, blockQuotePath] = match ?? [];
+        if (
+          match &&
+          Array.isArray(blockQuoteElement?.children) &&
+          blockQuoteElement.children[0].text === ""
+        ) {
+          event.preventDefault();
+          const newParagraph = {
+            type: "paragraph",
+            children: [{ text: "" }],
+          };
+          Transforms.insertNodes(editor, newParagraph, {
+            at: Editor.after(editor, blockQuotePath),
+            select: true,
+          });
+          Transforms.removeNodes(editor, { at: blockQuotePath });
+        }
       }
     }
   };

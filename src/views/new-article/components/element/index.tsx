@@ -6,7 +6,7 @@ interface IProps {}
 
 const Element: React.FC = (props) => {
   const { attributes, children, element } = props;
-  console.log("Element props: ", props);
+  // console.log("Element props: ", props);
   switch (element.type) {
     case "h1":
       return (
@@ -31,6 +31,12 @@ const Element: React.FC = (props) => {
         <h4 {...attributes} style={{ fontSize: element.fontSize }}>
           {children}
         </h4>
+      );
+    case "block-quote":
+      return (
+        <blockquote {...attributes} className="slate-block-quote">
+          {children}
+        </blockquote>
       );
     case "link":
       return (
