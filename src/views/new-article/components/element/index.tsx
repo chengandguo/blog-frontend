@@ -1,5 +1,7 @@
 import React from "react";
 import LinkElement from "./link-element";
+import ImageElement from "./image-element";
+import CodeBlockElement from "./code-block-element";
 import "./index.scss";
 
 interface IProps {}
@@ -44,7 +46,18 @@ const Element: React.FC = (props) => {
           {children}
         </LinkElement>
       );
-
+    case "image":
+      return (
+        <ImageElement attributes={attributes} element={element}>
+          {children}
+        </ImageElement>
+      );
+    case "code-block":
+      return (
+        <CodeBlockElement attributes={attributes} element={element}>
+          {children}
+        </CodeBlockElement>
+      );
     default:
       return (
         <p {...attributes} style={{ fontSize: element.fontSize }}>

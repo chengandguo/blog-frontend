@@ -1,0 +1,97 @@
+/**
+ *
+ *  ---------------------x
+ * |  left     middle   right
+ * |top
+ * |
+ * |middle
+ * |
+ * |bottom
+ * y
+ */
+
+.slate-element-image {
+  display: inline-block;
+  .image-container {
+    position: relative;
+    display: inline-block;
+    .image-origin {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    .image-resize {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      border: 1px solid #1a73e8;
+      box-sizing: border-box;
+      background-color: transparent;
+      z-index: 1;
+      .resize-block {
+        position: absolute;
+        border: 1px solid #fff;
+        background-color: #1a73e8;
+        width: 7px;
+        height: 7px;
+        z-index: 2;
+      }
+      // first row
+      .resize-block-left-top {
+        left: 0;
+        top: 0;
+        transform: translate(-50%, -50%);
+        cursor: nwse-resize;
+      }
+      .resize-block-middle-top {
+        left: 50%;
+        top: 0;
+        transform: translate(-50%, -50%);
+        cursor: ns-resize;
+      }
+      .resize-block-right-top {
+        right: 0;
+        top: 0;
+        transform: translate(50%, -50%);
+        cursor: nesw-resize;
+      }
+
+      // second row
+      .resize-block-left-middle {
+        left: 0;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        cursor: ew-resize;
+      }
+      .resize-block-right-middle {
+        right: 0;
+        top: 50%;
+        transform: translate(50%, -50%);
+        cursor: ew-resize;
+      }
+
+      // third row
+      .resize-block-left-bottom {
+        left: 0;
+        bottom: 0;
+        transform: translate(-50%, 50%);
+        cursor: nesw-resize;
+      }
+      .resize-block-middle-bottom {
+        left: 50%;
+        bottom: 0;
+        transform: translate(-50%, 50%);
+        cursor: ns-resize;
+      }
+      .resize-block-right-bottom {
+        right: 0;
+        bottom: 0;
+        transform: translate(50%, 50%);
+        cursor: nwse-resize;
+      }
+    }
+  }
+}

@@ -7,6 +7,8 @@ import ErrorView from "../views/error-view";
 const ArticleList = lazy(() => import("../views/article-list"));
 const ArticleDetail = lazy(() => import("../views/article-detail"));
 const NewArticle = lazy(() => import("../views/new-article"));
+const Dashboard = lazy(() => import("../views/dashboard"));
+const Prism = lazy(() => import("../views/prism"));
 
 export const routeList = [
   {
@@ -34,17 +36,17 @@ export const routeList = [
   },
   {
     path: "/dashboard",
-    element: <ArticleDetail />,
-    errorElement: <ErrorView />,
-  },
-  {
-    path: "/dashboard",
-    element: <ArticleDetail />,
+    element: <Dashboard />,
     errorElement: <ErrorView />,
   },
   {
     path: "/new-article",
     element: <NewArticle />,
+    errorElement: <ErrorView />,
+  },
+  {
+    path: "/prism",
+    element: <Prism />,
     errorElement: <ErrorView />,
   },
 ];

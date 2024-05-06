@@ -7,6 +7,8 @@ import ColorMarkItem from "./color-mark-item";
 import BackgroundColorMarkItem from "./background-color-mark-item";
 import ToolbarLinkItem from "./toolbar-link-item";
 import ToolbarQuoteItem from "./toolbar-quote-item";
+import ToolbarImageItem from "./toolbar-image-item";
+import ToolbarCodeBlockItem from "./toolbar-code-block-item";
 // icons
 import BoldIcon from "./icons/bold-icon";
 import ItalicIcon from "./icons/italic-icon";
@@ -53,6 +55,8 @@ const EditorToolbar: React.FC<IProps> = (props) => {
         />
         <ToolbarLinkItem />
         <ToolbarQuoteItem />
+        <ToolbarImageItem />
+        <ToolbarCodeBlockItem />
       </ul>
     </div>
   );

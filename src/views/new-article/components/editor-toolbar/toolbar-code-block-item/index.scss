@@ -1,0 +1,29 @@
+.editor-toolbar-item {
+  margin-right: 4px;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  border-radius: 2px;
+  &-active {
+    background-color: #d3e3fd;
+    &:hover {
+      background-color: #d3e3fd !important;
+    }
+  }
+  &:hover {
+    background-color: #edf2fa;
+  }
+
+  .editor-toolbar-item-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .file-input {
+    display: none;
+  }
+}

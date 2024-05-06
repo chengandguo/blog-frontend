@@ -3,17 +3,19 @@ import "./index.scss";
 
 interface IProps {
   className?: string;
+  fill?: string;
 }
 
 const CopyIcon: React.FC<IProps> = (props) => {
-  const { className } = props;
+  const { className, fill = "#444746" } = props;
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
+      className={className}
       width="24px"
       height="24px"
       viewBox="0 0 24 24"
-      fill="#444746"
+      fill={fill}
     >
       <g fillRule="nonzero" transform="translate(3 4)">
         <path d="M7 1h7c1.1045695 0 2 .8954305 2 2v9c0 1.1045695-.8954305 2-2 2H7c-1.1045695 0-2-.8954305-2-2V3c0-1.1045695.8954305-2 2-2zm7 11V3H7v9h7z" />
